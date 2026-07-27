@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>構造物調査 | UL AQUATICS INC.</title>
+  <title>事業内容詳細 | UL AQUATICS INC.</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,8 +17,8 @@
       </div>
       <nav class="site-nav">
         <ul>
-          <li><a href="index.html#services">事業内容</a></li>
-          <li><a href="index.html#achievements">業務実績</a></li>
+          <!-- トップページの #services（事業内容エリア）に移動 -->
+          <li><a href="index.html#services">事業内容トップ</a></li>
           <li><a href="index.html#about">会社概要</a></li>
           <li><a href="index.html#contact">お問い合わせ</a></li>
         </ul>
@@ -29,39 +29,47 @@
   <!-- サブページ用ヒーローバナー -->
   <div class="sub-hero">
     <div class="container">
-      <p class="sub-hero-cat">SERVICE</p>
-      <h2 class="sub-hero-title">構造物調査</h2>
+      <p class="sub-hero-cat">SERVICE DETAILS</p>
+      <h2 class="sub-hero-title">事業内容の詳細</h2>
     </div>
   </div>
 
   <!-- メインコンテンツ -->
   <main class="container page-content">
     
-    <!-- 概要セクション -->
-    <section class="section-block fade-in">
-      <h3 class="section-subtitle">水中構造物の安全を守る、高度な音響・光学調査</h3>
+    <!-- 1. 構造物調査セクション (id="structure") -->
+    <section id="structure" class="section-block fade-in" style="scroll-margin-top: 100px;">
+      <h3 class="section-title">構造物調査</h3>
+      <h4 class="section-subtitle">水中構造物の安全を守る、高度な音響・光学調査</h4>
       <p class="lead-text">
         ダム、港湾構造物、橋脚などの水中・水底構造物において、最先端の音響探査装置やROV（水中ドローン）を駆使し、非破壊で精密な点検・調査を実施します。
       </p>
-    </section>
-
-    <!-- 特徴グリッド -->
-    <section class="section-block fade-in">
-      <h3 class="section-title">調査の特徴</h3>
       <div class="card-grid">
         <div class="card-item">
           <h3>高精度3D点群データの取得</h3>
           <p>マルチビーム音響測深機を用いて、水中構造物の形状をミリ単位の精度で可視化・データ化します。</p>
         </div>
         <div class="card-item">
-          <h3>濁水・暗所での撮影・探査</h3>
+          <h3>濁水・暗所での探査</h3>
           <p>視界が極めて悪い濁水域でも、超音波カメラを活用することで鮮明な映像と形状の把握が可能です。</p>
         </div>
-        <div class="card-item">
-          <h3>ROV（水中ロボット）による安全調査</h3>
-          <p>ダイバーの潜水が困難な深海や狭小スペースでも、ROVを投入することで安全かつ迅速に点検を行います。</p>
-        </div>
       </div>
+    </section>
+
+    <!-- 2. 環境調査セクション (id="environment") -->
+    <section id="environment" class="section-block fade-in" style="scroll-margin-top: 100px;">
+      <h3 class="section-title">環境調査</h3>
+      <p class="lead-text">
+        水質・底質分析から生物相調査まで、豊富な実績をもとに水域環境の保全と健全な維持をアセスメントします。
+      </p>
+    </section>
+
+    <!-- 3. 機器開発セクション (id="development") -->
+    <section id="development" class="section-block fade-in" style="scroll-margin-top: 100px;">
+      <h3 class="section-title">機器開発</h3>
+      <p class="lead-text">
+        現場のニーズに合わせた特注の水中探査機器や撮影フレームなどの設計・開発を行っています。
+      </p>
     </section>
 
     <!-- 戻るボタン -->
@@ -71,14 +79,12 @@
 
   </main>
 
-  <!-- フッター -->
   <footer class="site-footer">
     <div class="container footer-content">
       <p>&copy; UL AQUATICS INC. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- JavaScript読み込み -->
   <script src="script.js"></script>
 </body>
 </html>
