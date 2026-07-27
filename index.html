@@ -182,10 +182,37 @@
             text-align: center;
         }
 
+        /* 変更後：スマホ表示（SP表示）時のフレキシブル設定 */
         @media (max-width: 768px) {
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
+          /* ヘッダーを縦並びにし、要素を中央寄せ */
+          .header-content {
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+          }
+
+          /* ナビゲーションメニューを折り返して柔軟に配置 */
+          .site-nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 16px;
+          }
+
+          /* カードグリッドを1列の可変レイアウトに */
+          .card-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+
+          /* カードの余白調整 */
+          .card-item {
+            padding: 20px 16px;
+          }
+
+          /* タイトルの文字サイズ調整 */
+          .section-title {
+            font-size: 1.6rem;
+          }
         }
     </style>
 </head>
