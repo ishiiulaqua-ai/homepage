@@ -35,3 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeElements.forEach(el => observer.observe(el));
 });
+document.addEventListener('DOMContentLoaded', () => {
+  // 業務実績のタブ切り替え制御
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 全てのボタンとコンテンツから active クラスを削除
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      // クリックされたボタンと対応するコンテンツに active を付与
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-tab');
+      const targetContent = document.getElementById(targetId);
+      
+      if (targetContent) {
+        targetContent.classList.add('active');
+      }
+    });
+  });
+});
