@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | ユーエルアクアティクス株式会社</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="logo">
+                <a href="index.html">UL AQUATICS INC.</a>
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="service-detail.html">事業内容</a></li>
+                    <li><a href="achievements.html">業務実績</a></li>
+                    <li><a href="company.html">会社概要</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="recruit.html">採用</a></li>
+                    <li><a href="contact.html" class="btn-contact active">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <span class="sub-title">CONTACT</span>
+                <h2>お問い合わせ</h2>
+                <p>調査・点検のご相談、お見積り依頼、採用に関するお問い合わせはこちらからお気軽にご連絡ください。</p>
+            </div>
+        </section>
+
+        <section class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-info-boxes">
+                    <div class="info-box">
+                        <h3>お電話でのお問い合わせ</h3>
+                        <p class="tel-number">大阪本社: 06-6310-0686</p>
+                        <p class="tel-number">福岡営業所: 092-874-0171</p>
+                        <p class="note">（受付時間：平日 9:00 〜 18:00）</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>メールで直接送信する場合</h3>
+                        <p>下記メールアドレスまで直接ご連絡いただくことも可能です。</p>
+                        <a href="mailto:info@ulaqua.com" class="email-link">info@ulaqua.com</a>
+                    </div>
+                </div>
+
+                <!-- お問い合わせフォーム -->
+                <form class="contact-form" action="mailto:info@ulaqua.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required">必須</span></label>
+                        <input type="text" id="name" name="お名前" required placeholder="例）山田 太郎">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">貴社名・団体名</label>
+                        <input type="text" id="company" name="会社名" placeholder="例）〇〇建設株式会社">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">必須</span></label>
+                        <input type="email" id="email" name="メールアドレス" required placeholder="例）example@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">お問い合わせ種別 <span class="required">必須</span></label>
+                        <select id="category" name="種別" required>
+                            <option value="">選択してください</option>
+                            <option value="調査・点検のご相談">水域調査・点検のご相談</option>
+                            <option value="お見積りのご依頼">お見積りのご依頼</option>
+                            <option value="採用について">採用について</option>
+                            <option value="その他">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                        <textarea id="message" name="内容" rows="6" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    </div>
+
+                    <div class="form-submit text-center">
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; UL AQUATICS INC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
