@@ -1,59 +1,45 @@
-// スムーズスクロールの追加（オプション：メニューをクリックした時に滑らかに移動する）
-document.querySelectorAll('.site-nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        // 同じページ内へのリンク（#で始まる）の場合のみ実行
-        if (this.getAttribute('href').startsWith('#')) {
-            e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
 
-            // リンク先の要素を取得
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+    // 1. スマホ用ハンバーガーメニュー動作
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-            if (targetElement) {
-                // スムーズにスクロール
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('is-open');
+        });
+
+        // リンククリック時にメニューを閉じる
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                mainNav.classList.remove('is-open');
+            });
+        });
+    }
+
+    // 2. ページ内スムーズスクロール補正（ヘッダーの高さを考慮）
+    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+    const headerHeight = 70; // ヘッダーの高さ(px)
+
+    smoothScrollLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            
+            if (targetId !== "#" && targetId !== "") {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
-        }
+        });
     });
-});
 
-// スクロールに合わせて要素をふわっと表示させる（Intersection Observer）
-document.addEventListener('DOMContentLoaded', () => {
-  const fadeElements = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  fadeElements.forEach(el => observer.observe(el));
-});
-document.addEventListener('DOMContentLoaded', () => {
-  // 業務実績のタブ切り替え制御
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // 全てのボタンとコンテンツから active クラスを削除
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabContents.forEach(c => c.classList.remove('active'));
-
-      // クリックされたボタンと対応するコンテンツに active を付与
-      btn.classList.add('active');
-      const targetId = btn.getAttribute('data-tab');
-      const targetContent = document.getElementById(targetId);
-      
-      if (targetContent) {
-        targetContent.classList.add('active');
-      }
-    });
-  });
 });
