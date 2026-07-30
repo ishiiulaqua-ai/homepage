@@ -1,427 +1,214 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>UL AQUATICS INC. - ユーエルアクアティクス</title>
-  <style>
-    /* ベーススタイル */
-    :root {
-      --text-color: #333;
-      --heading-color: #000;
-      --gray-background: #eeeeee;
-      --link-color: #333;
-    }
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
-    body {
-      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: #fff;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    a {
-      text-decoration: none;
-      color: var(--link-color);
-      transition: color 0.3s;
-    }
-    a:hover {
-      color: #0077b6;
-    }
-
-    /* レイアウト・コンテナ */
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    .section-block {
-      margin-bottom: 60px;
-    }
-    .section-title {
-      font-size: 2.2rem;
-      color: var(--heading-color);
-      margin-bottom: 30px;
-      font-weight: bold;
-    }
-    .text-right {
-      text-align: right;
-    }
-
-    /* 1. ヘッダー */
-    .site-header {
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      background-color: rgba(255, 255, 255, 0.95);
-      z-index: 1000;
-    }
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .site-logo h1 {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    .tagline {
-      font-size: 0.8rem;
-      line-height: 1.3;
-    }
-    .site-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      font-size: 0.9rem;
-    }
-
-    /* 2. メインビジュアル */
-    .hero-section {
-      position: relative;
-      width: 100%;
-    }
-    .hero-image {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* グリッドレイアウト */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-    .card-item {
-      text-align: center;
-      border: 1px solid #ccc;
-      padding: 30px;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .card-item h3 a {
-      color: #0077b6;
-      font-weight: bold;
-    }
-    .card-item h3 a:hover {
-      text-decoration: underline;
-    }
-    .gray-box {
-      background-color: var(--gray-background);
-      border: none;
-    }
-    .card-icon {
-      width: 100px;
-      height: 100px;
-      background-color: #ccc;
-      margin: 0 auto 15px;
-      display: block;
-      border-radius: 50%;
-    }
-    .card-item h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-    }
-    .card-item p {
-      font-size: 0.9rem;
-    }
-
-    /* お知らせ */
-    .news-list-container {
-      border: 2px solid #ddd;
-      background-color: #f9f9f9;
-      padding: 20px;
-      height: 150px;
-      overflow-y: scroll;
-    }
-
-    /* 採用情報 */
-    .recruit-cards {
-      text-align: center;
-    }
-    .recruit-illustration {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    /* お問い合わせ */
-    .contact-button {
-      display: inline-block;
-      padding: 15px 40px;
-      background-color: #0077b6;
-      color: #fff;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    .contact-button:hover {
-      background-color: #005689;
-      color: #fff;
-    }
-
-    /* フッター */
-    .site-footer {
-      background-color: var(--gray-background);
-      padding: 30px 0;
-      margin-top: 60px;
-    }
-    .footer-content {
-      text-align: center;
-    }
-
-    /* スマホ（レスポンシブ）対応 */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-      }
-      .site-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-      }
-      .card-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーエルアクアティクス株式会社 | 水域構造物調査・点検・環境調査</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ヘッダー -->
-  <header class="site-header">
-    <div class="container header-content">
-      <div class="site-logo">
-        <h1>UL AQUATICS INC.</h1>
-        <p class="tagline">UL AQUATICS には、UNLIMITED LOGIC OF AQUATICS "水生の無限の力"を意味しています。<br>私達は、"水生の無限の力"を感じて日々の仕事に取り組んでおります。</p>
-      </div>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="#services">事業内容</a></li>
-          <li><a href="#achievements">業務実績</a></li>
-          <li><a href="#about">会社概要</a></li>
-          <li><a href="#news">お知らせ</a></li>
-          <li><a href="#recruit">採用</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- ヘッダーエリア -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="logo">
+                <a href="index.html">UL AQUATICS INC.</a>
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="service-detail.html">事業内容</a></li>
+                    <li><a href="achievements.html">業務実績</a></li>
+                    <li><a href="company.html">会社概要</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="recruit.html">採用</a></li>
+                    <li><a href="contact.html" class="btn-contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- メインビジュアル -->
-  <div class="hero-section">
-    <img src="main_theme.jpg" alt="メインビジュアル" class="hero-image">
-  </div>
+    <main class="main-content">
+        <!-- ヒーロービジュアルセクション -->
+        <section class="hero-section">
+            <div class="hero-inner">
+                <h2>UNLIMITED LOGIC OF AQUATICS</h2>
+                <p>「水生の無限の力」を感じ、水陸両眼の視点で水域調査の未来をひらく。</p>
+                <div class="hero-buttons">
+                    <a href="service-detail.html" class="btn btn-primary">事業内容を見る</a>
+                    <a href="contact.html" class="btn btn-secondary">お問い合わせ</a>
+                </div>
+            </div>
+        </section>
 
-  <main class="container">
-    
-<!-- 事業内容セクション -->
-    <section id="services" class="section-block">
-　　　<h2 class="section-title">
-        <a href="service-detail.html" style="color: inherit; text-decoration: none;">事業内容 →</a>
-      </h2>
-      <div class="card-grid">
-        <!-- 1. 構造物調査 -->
-        <article class="card-item">
-          <div class="card-icon"></div>
-          <h3><a href="service-detail.html#structure">構造物調査 →</a></h3>
-          <p>音響探査やROVを用いた水中構造物の精密点検・調査を実施します。</p>
-          <p style="margin-top: 15px; font-weight: bold;">
-            <a href="service-detail.html#structure">詳しく見る</a>
-          </p>
-        </article>
+        <!-- 事業内容セクション -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-title">OUR SERVICES</span>
+                    <h2>事業内容</h2>
+                    <p>30年以上にわたり蓄積した水質・環境調査および構造物点検の技術力で対応します。</p>
+                </div>
 
-        <!-- 2. 環境調査 -->
-        <article class="card-item">
-          <div class="card-icon"></div>
-          <h3><a href="service-detail.html#environment">環境調査 →</a></h3>
-          <p>水質・底質分析から生物相調査まで、水域環境の保全をサポートします。</p>
-          <p style="margin-top: 15px; font-weight: bold;">
-            <a href="service-detail.html#environment">詳しく見る</a>
-          </p>
-        </article>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>構造物調査</h3>
+                        <p>音響探査やROV（水中ドローン）を用いた水中構造物の精密点検・健全度調査を実施します。</p>
+                        <a href="service-detail.html#structure" class="link-more">詳しく見る →</a>
+                    </article>
 
-        <!-- 3. 水文調査 -->
-        <article class="card-item">
-          <div class="card-icon"></div>
-          <h3><a href="service-detail.html#water">水文調査 →</a></h3>
-          <p>適切なプロセスと対応とで円満に調査を実施することで、高精度な情報収集に取り組んでおります。</p>
-          <p style="margin-top: 15px; font-weight: bold;">
-            <a href="service-detail.html#water">詳しく見る</a>
-          </p>
-        </article>
-      </div>
-    </section>
+                    <article class="service-card">
+                        <h3>環境調査</h3>
+                        <p>水質・底質分析から生物相調査まで、豊富な経験をもとに水域環境の保全をサポートします。</p>
+                        <a href="service-detail.html#environment" class="link-more">詳しく見る →</a>
+                    </article>
 
-<!-- 業務実績セクション -->
-<section id="achievements" class="section-block">
-  <h2 class="section-title">
-    <a href="achievements-detail.html" style="color: inherit; text-decoration: none;">業務実績 →</a>
-  </h2>
-  
-  <!-- 実績カテゴリータブ -->
-  <div class="tab-container">
-    <button class="tab-btn active" data-tab="structure-achieve">構造物調査</button>
-    <button class="tab-btn" data-tab="env-achieve">環境調査</button>
-    <button class="tab-btn" data-tab="water-achieve">水文調査</button>
-  </div>
+                    <article class="service-card">
+                        <h3>水文調査</h3>
+                        <p>流向・流速計測や水位調査など、適切なプロセスの下で高精度な情報収集に取り組んでいます。</p>
+                        <a href="service-detail.html#water" class="link-more">詳しく見る →</a>
+                    </article>
+                </div>
 
-  <!-- タブコンテンツ -->
-  <div class="tab-content-wrapper">
-    <!-- 1. 構造物調査実績 -->
-    <div id="structure-achieve" class="tab-content active">
-      <div class="card-grid">
-        <article class="card-item gray-box">
-          <h3>漁港・港湾・海岸構造物</h3>
-          <p>アセットマネジメント調査（福井、愛知、兵庫、和歌山、山口、福岡、鹿児島 他）/ 横浜港・玄界島漁港等の被災状況調査</p>
-        </article>
-        <article class="card-item gray-box">
-          <h3>河川・ダム・水門・管渠</h3>
-          <p>関空連絡橋点検 / 淀川大堰・広川ダム・一庫ダム等の構造物調査 / 天満川樋門・日光川水門維持管理計画策定</p>
-        </article>
-        <article class="card-item gray-box">
-          <h3>橋梁・各種設備点検</h3>
-          <p>九頭竜川・淀川・福岡市内河川橋梁健全度調査 / パイルベント橋脚現況調査（大阪市・鳥取県・広島市等）</p>
-        </article>
-      </div>
-    </div>
+                <div class="text-center margin-top-lg">
+                    <a href="service-detail.html" class="btn btn-outline">事業内容の詳細を見る →</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- 2. 環境調査実績 -->
-    <div id="env-achieve" class="tab-content">
-      <div class="card-grid">
-        <article class="card-item gray-box">
-          <h3>海洋環境モニタリング</h3>
-          <p>各原子力・火力発電所環境モニタリング / 羽田空港・大阪湾・博多湾等の濁度監視・ADCP曳航観測</p>
-        </article>
-        <article class="card-item gray-box">
-          <h3>生物相・水域生態系調査</h3>
-          <p>関西空港島・中部空港島での漁業生物観察 / 藻場・アマモ場観察 / 魚礁設置効果判定および付着生物調査</p>
-        </article>
-        <article class="card-item gray-box">
-          <h3>河川環境・生活環境調査</h3>
-          <p>淀川・相模川・木曽川等の流量観測・深浅測量 / 京都市河川水質調査 / アスベスト・PCB・騒音振動調査</p>
-        </article>
-      </div>
-    </div>
+        <!-- 業務実績セクション -->
+        <section id="achievements" class="achievements-preview section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-title">ACHIEVEMENTS</span>
+                    <h2>業務実績</h2>
+                    <p>全国の漁港・港湾・河川・ダム等における豊富な調査実績の一部をご紹介します。</p>
+                </div>
 
-    <!-- 3. 水文調査実績 -->
-    <div id="water-achieve" class="tab-content">
-      <div class="card-grid">
-        <article class="card-item gray-box">
-          <h3>高速道路・国交省水文調査</h3>
-          <p>NEXCO新名神高速道路・湯浅御坊道路水文調査 / 国土交通省清滝生駒道路・洲本バイパス水文調査業務</p>
-        </article>
-        <article class="card-item gray-box">
-          <h3>水利用実態・井戸・ため池</h3>
-          <p>和歌山県・兵庫県・大阪府下での井戸戸別聞き取り（井戸調査A・B） / ため池台帳・農業用水系統図作成</p>
-        </article>
-        <article class="card-item gray-box">
-          <h3>観測・連続データ取得</h3>
-          <p>自記式水位計による連続観測 / 電磁流速計を用いた断面法・容器法流量観測 / 谷・渓流の源頭調査</p>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="achievement-preview-list">
+                    <div class="preview-item">
+                        <h4>漁港・港湾・海岸構造物</h4>
+                        <p>アセットマネジメント調査（福井・愛知・兵庫・福岡 他） / 横浜港・玄界島漁港等の被災状況調査</p>
+                    </div>
+                    <div class="preview-item">
+                        <h4>河川・ダム・水門・管渠</h4>
+                        <p>関空連絡橋点検 / 淀川大堰・広川ダム等の構造物調査 / 天満川樋門維持管理計画策定</p>
+                    </div>
+                    <div class="preview-item">
+                        <h4>橋梁・各種設備点検</h4>
+                        <p>九頭竜川・淀川橋梁健全度調査 / パイルベント橋脚現況調査（大阪市・鳥取県 他）</p>
+                    </div>
+                </div>
 
-<!-- ユーエルアクアティクスについてセクション -->
-<section id="about" class="section-block">
-  <h2 class="section-title">
-    <a href="company.html" style="color: inherit; text-decoration: none;">ユーエルアクアティクスについて →</a>
-  </h2>
+                <div class="text-center margin-top-lg">
+                    <a href="achievements.html" class="btn btn-primary">業務実績一覧へ →</a>
+                </div>
+            </div>
+        </section>
 
-  <div class="about-hero-box">
-    <div class="about-lead">
-      <h3>「共に感じ、共に解決できるパートナー意識」</h3>
-      <p>
-        水性の眼を持って業務に取り組ませていただき、陸性の眼も育ませていただいて30余年。<br>
-        蓄積した有用な経験をもとに、高品質な成果をお約束できる企業性を発展・改善させて参ります。
-      </p>
-    </div>
-  </div>
+        <!-- 会社情報・強みセクション -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-title">ABOUT US</span>
+                    <h2>ユーエルアクアティクスについて</h2>
+                    <p>「共に感じ、共に解決できるパートナー意識」で高品質な成果をお約束します。</p>
+                </div>
 
-  <div class="card-grid" style="margin-top: 30px;">
-    <!-- 1. 会社特徴（強み） -->
-    <article class="card-item">
-      <div class="card-icon-number">01</div>
-      <h3>「水陸両眼」の強み</h3>
-      <p>
-        社内に7名の潜水技士が内在。陸上部と水中部を別々の業者に頼ることなく、3Dの視点で一括調査することでズレ・モレを防ぎます。
-      </p>
-    </article>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="num">01</span>
+                        <h4>「水陸両眼」の強み</h4>
+                        <p>社内に7名の潜水技士が内在。陸上部と水中部を一括調査することで調査のブレや漏れを防ぎます。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="num">02</span>
+                        <h4>特許技術・自社機材</h4>
+                        <p>濁水下でも鮮明な視界を確保する「クリアビュー」やADCP多層流向流速計等の先進設備を標準配備。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="num">03</span>
+                        <h4>創業30年以上の信頼</h4>
+                        <p>昭和63年の創業以来、水域環境と社会インフラの安全に貢献し続けるプロフェッショナル集団です。</p>
+                    </div>
+                </div>
 
-    <!-- 2. 会社概要 -->
-    <article class="card-item">
-      <div class="card-icon-number">02</div>
-      <h3>会社概要</h3>
-      <ul class="about-info-list">
-        <li><strong>代表者：</strong>代表取締役 吉川 元</li>
-        <li><strong>創業：</strong>昭和63年6月（30年以上の実績）</li>
-        <li><strong>拠点：</strong>大阪本社 / 福岡営業所</li>
-        <li><strong>社員数：</strong>17名（潜水技士7名・各種有資格者多数）</li>
-      </ul>
-    </article>
+                <div class="text-center margin-top-lg">
+                    <a href="company.html" class="btn btn-outline">会社概要・詳細を見る →</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- 3. 技術・特許 -->
-    <article class="card-item">
-      <div class="card-icon-number">03</div>
-      <h3>特許技術・先進設備</h3>
-      <p>
-        特許技術「クリアビュー（無視界・不良視界水中撮影機）」をはじめ、ADCP多層流向流速計や狭小域撮影システムなど自社機材を完備。
-      </p>
-    </article>
-  </div>
-</section>
+        <!-- お知らせセクション -->
+        <section id="news" class="news-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-title">NEWS</span>
+                    <h2>お知らせ</h2>
+                </div>
 
-    <!-- お知らせ -->
-    <section id="news" class="section-block text-right">
-      <h2 class="section-title">お知らせ</h2>
-      <div class="news-list-container">
-        <p>2026.07.01 ホームページをリニューアルしました。</p>
-      </div>
-    </section>
+                <div class="news-preview-list">
+                    <article class="news-item">
+                        <time datetime="2026-07-01">2026.07.01</time>
+                        <span class="news-category tag-info">お知らせ</span>
+                        <a href="news.html" class="news-link">ホームページをリニューアルいたしました。</a>
+                    </article>
+                    <article class="news-item">
+                        <time datetime="2022-02-21">2022.02.21</time>
+                        <span class="news-category tag-info">拠点情報</span>
+                        <a href="news.html" class="news-link">福岡営業所での社員常駐を再開いたしました。</a>
+                    </article>
+                </div>
 
-    <!-- 採用情報 -->
-    <section id="recruit" class="section-block recruit-cards">
-      <h2 class="section-title">採用情報</h2>
-      <p>一緒に「水生の無限の力」を探求する仲間を募集しています。</p>
-    </section>
+                <div class="text-center margin-top-lg">
+                    <a href="news.html" class="btn btn-outline">お知らせ一覧を見る →</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- お問い合わせ -->
-    <section id="contact" class="section-block text-right">
-      <h2 class="section-title">お問い合わせ</h2>
-      <a href="mailto:info@ulaqua.com" class="contact-button">お問い合わせはこちら</a>
-    </section>
+        <!-- 採用情報セクション -->
+        <section id="recruit" class="recruit-preview-section section-padding">
+            <div class="container text-center">
+                <span class="sub-title">RECRUIT</span>
+                <h2>採用情報</h2>
+                <p>「水生の無限の力」を共に探し、探求する仲間を募集しています。</p>
+                <div class="margin-top-md">
+                    <a href="recruit.html" class="btn btn-primary">採用情報・募集要項を見る →</a>
+                </div>
+            </div>
+        </section>
 
-  </main>
+        <!-- お問い合わせCTAセクション -->
+        <section id="contact" class="cta-section">
+            <div class="container text-center">
+                <h2>お問い合わせ</h2>
+                <p>水域調査・点検のお見積りや各種ご相談につきましては、お気軽にご連絡ください。</p>
+                <div class="margin-top-md">
+                    <a href="contact.html" class="btn btn-primary btn-large">お問い合わせフォームへ</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- フッター -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; UL AQUATICS INC. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <!-- フッターエリア -->
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="service-detail.html">事業内容</a></li>
+                    <li><a href="achievements.html">業務実績</a></li>
+                    <li><a href="company.html">会社概要</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="recruit.html">採用</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; UL AQUATICS INC. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
