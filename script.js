@@ -43,3 +43,89 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- スマホメニュー制御 ---
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('is-open');
+        });
+
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                mainNav.classList.remove('is-open');
+            });
+        });
+    }
+
+    // --- ヒーロースライダー制御 ---
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-arrow');
+    const nextBtn = document.querySelector('.next-arrow');
+
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = (index + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) {
+                dots[currentSlide].classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startAutoPlay() {
+            slideInterval = setInterval(nextSlide, 5000); // 5秒ごとに自動切替
+        }
+
+        function resetAutoPlay() {
+            clearInterval(slideInterval);
+            startAutoPlay();
+        }
+
+        // イベント設定
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoPlay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoPlay();
+            });
+        }
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                showSlide(idx);
+                resetAutoPlay();
+            });
+        });
+
+        // 自動再生開始
+        startAutoPlay();
+    }
+
+});
