@@ -600,42 +600,26 @@ img {
     }
 }
 
-/* 波型ウェーブアニメーション */
+/* 波型ウェーブデコレーション（重ね合わせ・表示調整） */
 .wave-container {
     position: relative;
-    margin-top: -60px; /* スライダー画像の下部に重ねる */
-    z-index: 5;
+    margin-top: -70px; /* スライダー画像の下部に少し深めに重ねる */
+    z-index: 20;       /* ★スライダー（z-index: 10等）より前面に表示させる */
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    pointer-events: none; /* 波の上の領域のクリック阻害を防ぐ */
 }
 
 .waves {
     position: relative;
+    display: block;   /* インライン要素特有の余白を消去 */
     width: 100%;
-    height: 60px;
-    margin-bottom: -7px;
+    height: 70px;     /* ★高さを指定して波を確実に描画 */
+    min-height: 40px;
 }
 
-/* 波型ウェーブアニメーション */
-.wave-container {
-    position: relative;
-    margin-top: -65px; /* スライダー画像の下部に少し深めに重ねる */
-    z-index: 5;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    pointer-events: none; /* 下の要素へのクリック阻害を防止 */
-}
-
-.waves {
-    position: relative;
-    display: block; /* インライン要素特有の下部隙間を排除 */
-    width: 100%;
-    height: 70px;   /* 確実に重ね合わせるため高さを確保 */
-}
-
-/* 波の動き（CSSアニメーション） */
+/* 波のアニメーション */
 .parallax > use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
@@ -648,3 +632,5 @@ img {
     0% { transform: translate3d(-90px, 0, 0); }
     100% { transform: translate3d(85px, 0, 0); }
 }
+
+
