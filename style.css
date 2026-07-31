@@ -652,29 +652,39 @@ img {
 .prev-arrow { left: 20px; }
 .next-arrow { right: 20px; }
 
-/* ドットインジケーター */
+/* スライダーのインジケーター（ドット）の調整 */
 .slider-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 90px; /* ★波（高さ80px〜100px等）の上に位置するよう下に少し余白を設ける */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
-    z-index: 10;
+    gap: 12px;
+    z-index: 25; /* ★波（z-index: 10〜20）よりも手前に表示させる */
+    
+    /* 背景画像と同化して見えにくくなるのを防ぐカプセル風背景（お好みで） */
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px); /* 背景をうっすらぼかしてドットを強調 */
 }
 
+/* ドット自体のデザイン */
 .dot {
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* アクティブ（選択中）のドット */
 .dot.active {
-    background-color: var(--white);
-    transform: scale(1.2);
+    background-color: #00A896; /* テーマカラーのエメラルドグリーン */
+    width: 28px;               /* 横長に伸びるモダンなデザイン */
+    border-radius: 10px;
 }
 
 /* レスポンシブ調整 */
