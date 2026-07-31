@@ -1,22 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // 1. スマホ用ハンバーガーメニュー動作
+    // --- スマホハンバーガーメニュー制御 ---
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
 
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', function() {
+            // ボタンとメニューの両方に active または is-open クラスをトグル
+            menuToggle.classList.toggle('active');
             mainNav.classList.toggle('is-open');
         });
 
-        // リンククリック時にメニューを閉じる
+        // メニュー内のリンクをタップしたらメニューを閉じる
         const navLinks = mainNav.querySelectorAll('a');
         navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
+                menuToggle.classList.remove('active');
                 mainNav.classList.remove('is-open');
             });
         });
     }
+
+});
 
     // 2. ページ内スムーズスクロール補正（ヘッダーの高さを考慮）
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
