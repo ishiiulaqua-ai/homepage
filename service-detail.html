@@ -3,123 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>事業内容詳細 | UL AQUATICS INC.</title>
+  <title>事業内容詳細 | ユーエルアクアティクス株式会社</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ヘッダー -->
+  <!-- ヘッダーエリア -->
   <header class="site-header">
-    <div class="container header-content">
-      <div class="site-logo">
-        <h1><a href="index.html">UL AQUATICS INC.</a></h1>
-        <p class="tagline">UNLIMITED LOGIC OF AQUATICS "水生の無限の力"</p>
-      </div>
-      <nav class="site-nav">
+    <div class="header-container">
+      <h1 class="logo">
+        <a href="index.html">UL AQUATICS INC.</a>
+      </h1>
+      <button class="mobile-menu-toggle" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
         <ul>
-          <!-- トップページの #services（事業内容エリア）に移動 -->
-          <li><a href="index.html#services">事業内容トップ</a></li>
+          <li><a href="service-detail.html" class="active">事業内容</a></li>
+          <li><a href="achievements.html">業務実績</a></li>
           <li><a href="index.html#about">会社概要</a></li>
-          <li><a href="index.html#contact">お問い合わせ</a></li>
+          <li><a href="index.html#news">お知らせ</a></li>
+          <li><a href="index.html#recruit">採用</a></li>
+          <li><a href="index.html#contact" class="btn-contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- サブページ用ヒーローバナー -->
-  <div class="sub-hero">
-    <div class="container">
-      <p class="sub-hero-cat">SERVICE DETAILS</p>
-      <h2 class="sub-hero-title">事業内容の詳細</h2>
+  <main class="main-content">
+    <!-- サブページヒーローバナー -->
+    <section class="sub-hero">
+      <div class="container text-center">
+        <span class="sub-hero-cat">SERVICE DETAILS</span>
+        <h2 class="sub-hero-title">事業内容の詳細</h2>
+        <p class="sub-hero-lead">水陸両眼の視点と高度な調査技術で、確かな成果品をお届けします。</p>
+      </div>
+    </section>
+
+    <!-- メインコンテンツ -->
+    <div class="container section-padding">
+      
+      <!-- 1. 構造物調査セクション -->
+      <section id="structure" class="section-block anchor-section">
+        <div class="section-header">
+          <span class="badge">STRUCTURE</span>
+          <h3 class="section-title">構造物調査（陸水域・水中）</h3>
+          <p class="section-subtitle">「水陸両眼」でズレ・モレのない高精度な健全度調査を実現</p>
+        </div>
+        <p class="lead-text">
+          港湾、河川護岸、橋梁、ダム、水門、管渠などの陸上部から水中部までを、当社一社で一括調査。
+          内在する7名の潜水技士と陸上技術者が連携し、変状の連鎖や位置のズレ・モレを防止します。
+        </p>
+
+        <div class="card-grid">
+          <div class="card-item">
+            <h4>健全度・変状調査・アセットマネジメント</h4>
+            <p>コンクリート構造物および鋼構造物の目視・打音・破壊/非破壊検査を実施。肉厚測定、電位測定、陽極消耗度調査など多角的なデータを提供します。</p>
+          </div>
+          <div class="card-item">
+            <h4>潜水作業全般・現場作業</h4>
+            <p>深深度潜水、補修・設営・造成、浚渫、水中でのアーク溶接・切断、磁気探査、遺失物等の捜索・回収まで熟練の潜水技術者が対応します。</p>
+          </div>
+          <div class="card-item">
+            <h4>現場担当者による高品質な報告書作成</h4>
+            <p>現地調査を担当した技術者が野帳や写真を基に直接報告書・CAD図面を作成。写真と図面の不整合を防ぎ、信頼性の高い成果品をお届けします。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 環境調査セクション -->
+      <section id="environment" class="section-block anchor-section">
+        <div class="section-header">
+          <span class="badge">ENVIRONMENT</span>
+          <h3 class="section-title">環境調査（海洋・河川・生活環境）</h3>
+          <p class="section-subtitle">水環境全域にわたる精密モニタリングと生物相アセスメント</p>
+        </div>
+        <p class="lead-text">
+          発電所、港湾、河川、ダム周辺における各種モニタリングをはじめ、水質・底質分析、生物相調査まで幅広く対応。自社保有の最新機材と専門技術者により正確なデータを収集します。
+        </p>
+
+        <div class="card-grid">
+          <div class="card-item">
+            <h4>海洋・河川環境モニタリング</h4>
+            <p>水温・水質・底質（柱状採泥）・流況・照度・濁度・クロロフィルなどの環境データを多角的に追跡。深浅測量や河床材料調査にも対応します。</p>
+          </div>
+          <div class="card-item">
+            <h4>水域生物観察・生物相アセスメント</h4>
+            <p>藻場・アマモ場、潮間帯付着生物、魚類、淡水生物、プランクトンの観察およびサンプリング。魚類生殖腺成熟度や胃内容物分析などの室内分析試験も一貫して行います。</p>
+          </div>
+          <div class="card-item">
+            <h4>生活環境・防災モニタリング</h4>
+            <p>騒音、振動、交通量、大気、アスベスト・PCB調査のほか、土石流・地滑りなどの防災基礎調査、GISを活用したデータベース構築を実施します。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 水文調査セクション -->
+      <section id="water" class="section-block anchor-section">
+        <div class="section-header">
+          <span class="badge">HYDROLOGY</span>
+          <h3 class="section-title">水文調査（地下水・水利用）</h3>
+          <p class="section-subtitle">地域特性に配慮した丁寧なアプローチと確かな水質・土質分析</p>
+        </div>
+        <p class="lead-text">
+          インフラ建設に伴う地下水問題の把握・事前対策のため、地域住民への配慮を怠らず円滑な調査を推進。データの連続性と精度を追求した高度な水文観測を行います。
+        </p>
+
+        <div class="card-grid">
+          <div class="card-item">
+            <h4>水文観測・流量測定</h4>
+            <p>自記式水位計による連続観測、電磁流速計を用いた定期流量観測（断面法・容器法）、源頭調査、簡易揚水試験、井戸揚水試験に対応します。</p>
+          </div>
+          <div class="card-item">
+            <h4>水利用実態・農業用水調査</h4>
+            <p>井戸台帳・ため池台帳・沢湧水台帳の作成、水田の減水深調査、ブロック別流量観測、農業用水系統図の作成・整理を行います。</p>
+          </div>
+          <div class="card-item">
+            <h4>圧気工法影響調査・各種試料分析</h4>
+            <p>地下室調査、酸素濃度測定をはじめ、現地で採取した水質・土質のサンプルを水道法や環境基準に基づき室内分析します。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 戻るボタン -->
+      <div class="text-center margin-top-lg">
+        <a href="index.html#services" class="btn btn-outline">← トップページの事業内容へ</a>
+      </div>
+
     </div>
-  </div>
 
-  <!-- メインコンテンツ -->
-  <main class="container page-content">
-    
-  <!-- 1. 構造物調査セクション -->
-  <section id="structure" class="section-block fade-in" style="scroll-margin-top: 100px;">
-    <h3 class="section-title">構造物調査（陸水域・水中）</h3>
-    <h4 class="section-subtitle">「水陸両眼」でズレ・モレのない高精度な健全度調査を実現</h4>
-    <p class="lead-text">
-      港湾、河川護岸、橋梁、ダム、水門、管渠などの陸上部から水中部までを、当社一社で一括調査。
-      内在する7名の潜水技士と陸上技術者が連携し、変状の連鎖や位置のズレ・モレを防止します。
-    </p>
-
-    <div class="card-grid">
-      <div class="card-item">
-        <h3>健全度・変状調査・アセットマネジメント</h3>
-        <p>コンクリート構造物および鋼構造物の目視・打音・破壊/非破壊検査を実施。肉厚測定、電位測定、陽極消耗度調査など多角的なデータを提供します。</p>
+    <!-- お問い合わせCTA -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2>調査・点検のご相談はこちら</h2>
+        <p>各種調査のお見積りや工法についてのご質問など、お気軽にお問い合わせください。</p>
+        <div class="margin-top-md">
+          <a href="index.html#contact" class="btn btn-primary btn-large">お問い合わせフォームへ</a>
+        </div>
       </div>
-      <div class="card-item">
-        <h3>潜水作業全般・現場作業</h3>
-        <p>深深度潜水、補修・設営・造成、浚渫、水中でのアーク溶接・切断、磁気探査、遺失物等の捜索・回収まで熟練の潜水技術者が対応します。</p>
-      </div>
-      <div class="card-item">
-        <h3>現場担当者による高品質な報告書作成</h3>
-        <p>現地調査を担当した技術者が野帳や写真を基に直接報告書・CAD図面を作成。写真と図面の不整合を防ぎ、信頼性の高い成果品をお届けします。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. 環境調査セクション -->
-  <section id="environment" class="section-block fade-in" style="scroll-margin-top: 100px;">
-    <h3 class="section-title">環境調査（海洋・河川・生活環境）</h3>
-    <h4 class="section-subtitle">水環境全域にわたる精密モニタリングと生物相アセスメント</h4>
-    <p class="lead-text">
-      発電所、港湾、河川、ダム周辺における各種モニタリングをはじめ、水質・底質分析、生物相調査まで幅広く対応。自社保有の最新機材と専門技術者により正確なデータを収集します。
-    </p>
-
-    <div class="card-grid">
-      <div class="card-item">
-        <h3>海洋・河川環境モニタリング</h3>
-        <p>水温・水質・底質（柱状採泥）・流況・照度・濁度・クロロフィルなどの環境データを多角的に追跡。深浅測量や河床材料調査にも対応します。</p>
-      </div>
-      <div class="card-item">
-        <h3>水域生物観察・生物相アセスメント</h3>
-        <p>藻場・アマモ場、潮間帯付着生物、魚類、淡水生物、プランクトンの観察およびサンプリング。魚類生殖腺成熟度や胃内容物分析などの室内分析試験も一貫して行います。</p>
-      </div>
-      <div class="card-item">
-        <h3>生活環境・防災モニタリング</h3>
-        <p>騒音、振動、交通量、大気、アスベスト・PCB調査のほか、土石流・地滑りなどの防災基礎調査、GISを活用したデータベース構築を実施します。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. 水文調査セクション -->
-  <section id="water" class="section-block fade-in" style="scroll-margin-top: 100px;">
-    <h3 class="section-title">水文調査（地下水・水利用）</h3>
-    <h4 class="section-subtitle">地域特性に配慮した丁寧なアプローチと確かな水質・土質分析</h4>
-    <p class="lead-text">
-      インフラ建設に伴う地下水問題の把握・事前対策のため、地域住民への配慮を怠らず円滑な調査を推進。データの連続性と精度を追求した高度な水文観測を行います。
-    </p>
-
-    <div class="card-grid">
-      <div class="card-item">
-        <h3>水文観測・流量測定</h3>
-        <p>自記式水位計による連続観測、電磁流速計を用いた定期流量観測（断面法・容器法）、源頭調査、簡易揚水試験、井戸揚水試験に対応します。</p>
-      </div>
-      <div class="card-item">
-        <h3>水利用実態・農業用水調査</h3>
-        <p>井戸台帳・ため池台帳・沢湧水台帳の作成、水田の減水深調査、ブロック別流量観測、農業用水系統図の作成・整理を行います。</p>
-      </div>
-      <div class="card-item">
-        <h3>圧気工法影響調査・各種試料分析</h3>
-        <p>地下室調査、酸素濃度測定をはじめ、現地で採取した水質・土質のサンプルを水道法や環境基準に基づき室内分析します。</p>
-      </div>
-    </div>
-  </section>
-
-    <!-- 戻るボタン -->
-    <div class="btn-container fade-in">
-      <a href="index.html#services" class="back-button">← 事業内容一覧に戻る</a>
-    </div>
-
+    </section>
   </main>
 
+  <!-- フッターエリア -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; UL AQUATICS INC. All Rights Reserved.</p>
+    <div class="container footer-container">
+      <div class="footer-info-block">
+        <h3 class="footer-logo">UL AQUATICS INC.</h3>
+        <p class="company-name">ユーエルアクアティクス株式会社</p>
+        
+        <div class="footer-contact-details">
+          <div class="office-info">
+            <h4>【大阪本社】</h4>
+            <p>〒564-0051 大阪府吹田市豊津町19-12</p>
+            <p class="tel-row">TEL: <a href="tel:0663100686" class="footer-tel-link">06-6310-0686</a></p>
+          </div>
+          <div class="office-info">
+            <h4>【福岡営業所】</h4>
+            <p>〒814-0164 福岡県福岡市早良区賀茂4-6-27</p>
+            <p class="tel-row">TEL: <a href="tel:0928740171" class="footer-tel-link">092-874-0171</a></p>
+          </div>
+        </div>
+
+        <div class="footer-map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.6702758173425!2d135.49503467634423!3d34.75124038031535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e44eb28d3f79%3A0x6bd6c72750e3eb7b!2z44CSNTY0LTAwNTEg5aSn6Ziq5p2c5ZC544Oa44O844OI44Oq44O844OIIDE5LTEy!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" 
+            width="100%" 
+            height="180" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map 大阪本社">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer-nav-block">
+        <h4>CONTENTS</h4>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="service-detail.html">事業内容</a></li>
+            <li><a href="achievements.html">業務実績</a></li>
+            <li><a href="index.html#about">会社概要</a></li>
+            <li><a href="index.html#news">お知らせ</a></li>
+            <li><a href="index.html#recruit">採用情報</a></li>
+            <li><a href="index.html#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p class="copyright">&copy; UL AQUATICS INC. All Rights Reserved.</p>
     </div>
   </footer>
 
