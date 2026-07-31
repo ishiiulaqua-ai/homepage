@@ -1,17 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- スマホハンバーガーメニュー制御 ---
+    // 1. スマホハンバーガーメニュー制御
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
 
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', function() {
-            // ボタンとメニューの両方に active または is-open クラスをトグル
             menuToggle.classList.toggle('active');
             mainNav.classList.toggle('is-open');
         });
 
-        // メニュー内のリンクをタップしたらメニューを閉じる
         const navLinks = mainNav.querySelectorAll('a');
         navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
@@ -20,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-
-});
 
     // 2. ページ内スムーズスクロール補正（ヘッダーの高さを考慮）
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
@@ -47,28 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-
-    // --- スマホメニュー制御 ---
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('is-open');
-        });
-
-        const navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                mainNav.classList.remove('is-open');
-            });
-        });
-    }
-
-    // --- ヒーロースライダー制御 ---
+    // 3. ヒーロースライダー制御
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     const prevBtn = document.querySelector('.prev-arrow');
@@ -99,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         function startAutoPlay() {
-            slideInterval = setInterval(nextSlide, 5000); // 5秒ごとに自動切替
+            slideInterval = setInterval(nextSlide, 5000);
         }
 
         function resetAutoPlay() {
@@ -107,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
             startAutoPlay();
         }
 
-        // イベント設定
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
                 nextSlide();
@@ -129,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // 自動再生開始
         startAutoPlay();
     }
 
