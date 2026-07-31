@@ -94,18 +94,19 @@
 
         <!-- 動く波型ウェーブデコレーション -->
         <div class="wave-container">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 28" preserveAspectRatio="none">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" preserveAspectRatio="none">
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 58-28 88-28s 58 28 88 28 58-28 88-28 58 28 88 28v70h-352z" />
                 </defs>
-                <!-- 例：色を変えたり透明度を調整する例 -->
                 <g class="parallax">
-                    <!-- 奥：薄い水色 -->
-                    <use href="#gentle-wave" x="48" y="0" fill="rgba(0, 168, 150, 0.3)" />
-                    <!-- 中：少し濃い水色 -->
-                    <use href="#gentle-wave" x="48" y="3" fill="rgba(0, 168, 150, 0.6)" />
-                    <!-- 手前：白 -->
-                    <use href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+                    <!-- 1層目（一番奥）：濃い水色・半透明 -->
+                    <use href="#gentle-wave" x="48" y="0" fill="rgba(0, 168, 150, 0.35)" />
+                    <!-- 2層目（中奥）：淡い水色 -->
+                    <use href="#gentle-wave" x="48" y="3" fill="rgba(209, 232, 226, 0.6)" />
+                    <!-- 3層目（手前寄り）：半透明の白 -->
+                    <use href="#gentle-wave" x="48" y="6" fill="rgba(255, 255, 255, 0.75)" />
+                    <!-- 4層目（一番手前）：完全な白（下の白背景へ繋がる） -->
+                    <use href="#gentle-wave" x="48" y="9" fill="#ffffff" />
                 </g>
             </svg>
         </div>
