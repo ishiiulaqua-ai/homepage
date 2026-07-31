@@ -691,23 +691,20 @@ img {
     }
 }
 
-/* 波型ウェーブデコレーション（重ね合わせ・表示調整） */
+/* 波のコンテナ（ヒーロー画像の下端に重ねる） */
 .wave-container {
     position: relative;
-    margin-top: -70px; /* スライダー画像の下部に少し深めに重ねる */
-    z-index: 20;       /* ★スライダー（z-index: 10等）より前面に表示させる */
     width: 100%;
-    overflow: hidden;
+    margin-top: -80px; /* 画像の下端に重なるように引き上げる値（お好みで調整） */
+    z-index: 10;
     line-height: 0;
-    pointer-events: none; /* 波の上の領域のクリック阻害を防ぐ */
+    pointer-events: none;
 }
 
 .waves {
-    position: relative;
-    display: block;   /* インライン要素特有の余白を消去 */
     width: 100%;
-    height: 110px;     /* ★高さを指定して波を確実に描画 */
-    min-height: 60px;
+    height: 80px; /* 波の高さ */
+    min-height: 50px;
 }
 
 /* 波のアニメーション */
