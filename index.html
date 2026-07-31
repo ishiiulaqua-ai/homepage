@@ -98,10 +98,13 @@
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 58-28 88-28s 58 28 88 28 58-28 88-28 58 28 88 28v70h-352z" />
                 </defs>
+                <!-- 例：色を変えたり透明度を調整する例 -->
                 <g class="parallax">
-                    <use href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-                    <use href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                    <use href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <!-- 奥：薄い水色 -->
+                    <use href="#gentle-wave" x="48" y="0" fill="rgba(0, 168, 150, 0.3)" />
+                    <!-- 中：少し濃い水色 -->
+                    <use href="#gentle-wave" x="48" y="3" fill="rgba(0, 168, 150, 0.6)" />
+                    <!-- 手前：白 -->
                     <use href="#gentle-wave" x="48" y="7" fill="#ffffff" />
                 </g>
             </svg>
