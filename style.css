@@ -796,4 +796,181 @@ img {
     }
 }
 
+/* ==========================================================================
+   サブページ共通ヒーローバナー
+   ========================================================================== */
+.sub-hero {
+    background: linear-gradient(135deg, #1A252C 0%, #003B46 100%);
+    color: #ffffff;
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.sub-hero-cat {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #00A896;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sub-hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sub-hero-lead {
+    font-size: 1rem;
+    color: #D1E8E2;
+}
+
+/* ==========================================================================
+   アンカーリンクの位置ズレ補正
+   ========================================================================== */
+.anchor-section {
+    scroll-margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+/* ==========================================================================
+   事業内容（カードレイアウト）
+   ========================================================================== */
+.section-header {
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #E6F4F1;
+    color: #00A896;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #1A252C;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: #00A896;
+    font-weight: 500;
+}
+
+.lead-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444444;
+    margin-bottom: 25px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-item {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-top: 4px solid #00A896;
+    border-radius: 6px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.card-item h4 {
+    font-size: 1.1rem;
+    color: #1A252C;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.card-item p {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   業務実績（グループ＆リスト）
+   ========================================================================== */
+.achievement-group {
+    margin-bottom: 50px;
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #00A896;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.group-header h3 {
+    font-size: 1.5rem;
+    color: #1A252C;
+}
+
+.achievement-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-item {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.achievement-item h4 {
+    font-size: 1.15rem;
+    color: #003B46;
+    margin-bottom: 10px;
+}
+
+.achievement-item .desc {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.location-tag {
+    font-size: 0.8rem;
+    color: #00A896;
+    background-color: #F0F9F8;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* ボタン調整 */
+.margin-top-lg {
+    margin-top: 40px;
+}
+
 
