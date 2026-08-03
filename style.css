@@ -840,10 +840,30 @@ img {
     flex-wrap: wrap;
 }
 
-.office-info h4 {
-    font-size: 0.95rem;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
+/* ★拠点（【大阪本社】【福岡営業所】）ボタンのスタイル */
+.office-select-btn {
+    background: transparent;
+    border: none;
+    color: #CCCCCC;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin-bottom: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.office-select-btn:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ★現在マップ表示中のテキスト（アクティブ状態） */
+.office-select-btn.active {
+    color: var(--secondary-color, #00A896);
+    text-decoration: underline;
 }
 
 .office-info p {
@@ -863,11 +883,13 @@ img {
     color: var(--secondary-color);
 }
 
-/* マップエリア全体 */
-.footer-map-block {
-    margin-top: 15px;
+/* Google Map 埋め込み枠 */
+.footer-map-wrapper {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 /* マップ切り替えタブボタン */
 .map-tabs {
     display: flex;
