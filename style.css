@@ -217,7 +217,7 @@ img {
 }
 
 .main-nav .btn-contact {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: var(--white);
     padding: 8px 18px;
     border-radius: 4px;
