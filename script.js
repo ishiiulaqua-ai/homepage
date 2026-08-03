@@ -109,14 +109,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mapBtns = document.querySelectorAll('.map-tab-btn');
+    const officeBtns = document.querySelectorAll('.office-select-btn');
     const mapIframe = document.getElementById('footer-map-iframe');
 
-    if (mapBtns.length > 0 && mapIframe) {
-        mapBtns.forEach(btn => {
+    if (officeBtns.length > 0 && mapIframe) {
+        officeBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // アクティブ状態の切り替え
-                mapBtns.forEach(b => b.classList.remove('active'));
+                // アクティブ状態の切り替え（色や下線の変更用）
+                officeBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 // map属性からURLを取得してiframeを切り替え
