@@ -213,7 +213,7 @@ img {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .main-nav .btn-contact {
