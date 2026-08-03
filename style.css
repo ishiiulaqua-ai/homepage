@@ -805,35 +805,141 @@ img {
     font-size: 0.8rem;
     color: #777777;
 }
-
-/* マップ切り替えボタン */
-.map-tab-buttons {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
+/* ==========================================================================
+   6. フッター
+   ========================================================================== */
+.site-footer {
+    background-color: #1A252C;
+    color: #FFFFFF;
+    padding: 60px 0 20px;
 }
 
-.map-tab-btn {
-  padding: 6px 16px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  color: #333;
-  background-color: #e0e0e0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
 }
 
-.map-tab-btn:hover {
-  background-color: #d0d0d0;
+.footer-logo {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
 }
 
-/* 選択されているボタンのスタイル */
-.map-tab-btn.active {
-  color: #fff;
-  background-color: #005bac; /* ブランドカラーに合わせて変更してください */
-  border-color: #005bac;
+.company-name {
+    font-size: 0.95rem;
+    color: #CCCCCC;
+    margin-bottom: 25px;
+}
+
+.footer-contact-details {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.office-info h4 {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.office-info p {
+    font-size: 0.85rem;
+    color: #BBBBBB;
+    line-height: 1.5;
+}
+
+.footer-tel-link {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.footer-tel-link:hover {
+    color: var(--secondary-color);
+}
+
+/* マップエリア全体 */
+.footer-map-block {
+    margin-top: 15px;
+}
+
+/* マップ切り替えタブボタン */
+.map-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.map-tab {
+    background-color: #2C3E50;
+    color: #CCCCCC;
+    border: 1px solid #334451;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-tab:hover {
+    background-color: #334451;
+    color: #FFFFFF;
+}
+
+/* 選択されているタブ */
+.map-tab.active {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    border-color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Google Map iframeを囲む枠 */
+.footer-map-wrapper {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-nav-block h4 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334451;
+    padding-bottom: 8px;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-nav a {
+    color: #BBBBBB;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #FFFFFF;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2C3E50;
+    padding-top: 20px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #777777;
 }
 
 
@@ -868,11 +974,12 @@ img {
     .mobile-menu-toggle span {
         width: 100%;
         height: 3px;
-        background-color: #333333;
+        background-color: #333333; /* ヘッダーの背景色に合わせて調整 */
         border-radius: 2px;
         transition: all 0.3s ease;
     }
 
+    /* 三本線 -> ×印アニメーション */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(9.5px) rotate(45deg);
     }
@@ -883,6 +990,7 @@ img {
         transform: translateY(-9.5px) rotate(-45deg);
     }
 
+    /* メニュー表示位置とアニメーション */
     .main-nav {
         position: fixed;
         top: 0;
@@ -902,6 +1010,7 @@ img {
     }
 
     .main-nav ul {
+        display: flex;
         flex-direction: column;
         gap: 20px;
     }
@@ -962,6 +1071,7 @@ img {
         gap: 15px;
     }
 
+    /* スマホ時は電話番号をさらにタップしやすく拡大 */
     .footer-tel-link {
         font-size: 1.2rem;
     }
