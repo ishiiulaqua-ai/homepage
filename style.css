@@ -733,26 +733,26 @@ img {
     font-size: 1rem;
 }
 
-/* お問い合わせフォームのボタン枠線（強制適用） */
-.contact-form button,
-.contact-form input[type="submit"],
-.contact-form .btn {
-    border: 3px solid var(--primary-color) !important; /* 濃い青枠 */
-    background-color: var(--white) !important;          /* 白背景 */
-    color: var(--primary-color) !important;              /* 青文字 */
-    font-weight: bold !important;
-    padding: 12px 35px !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
+/* お問い合わせセクション（CTA）のボタンデザイン強化 */
+.cta-section .btn {
+    display: inline-block;
+    background-color: #FFFFFF !important;     /* ボタン背景を白 */
+    color: var(--primary-color) !important;  /* 文字色をメインの青 */
+    border: 3px solid #FFFFFF !important;    /* くっきり見せるための白枠線 */
+    font-weight: 700 !important;
+    padding: 16px 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 浮き出て見える影 */
+    transition: all 0.3s ease;
 }
 
-/* マウスを載せた時 */
-.contact-form button:hover,
-.contact-form input[type="submit"]:hover,
-.contact-form .btn:hover {
-    background-color: var(--primary-color) !important;  /* 青背景 */
-    color: var(--white) !important;                    /* 白文字 */
+/* マウスを乗せた時（ホバー時） */
+.cta-section .btn:hover {
+    background-color: transparent !important; /* 背景を透明にして枠線だけに */
+    color: #FFFFFF !important;               /* 文字を白に */
+    border-color: #FFFFFF !important;         /* 枠線はそのまま白 */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);              /* 少し上に持ち上がる効果 */
 }
 
 /* ==========================================================================
