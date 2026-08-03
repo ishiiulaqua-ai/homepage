@@ -11,6 +11,7 @@
     --primary-color: #005A9C;
     --primary-hover: #003D6B;
     --secondary-color: #00A896;
+    --secondary-hover: #008072;
     --text-color: #333333;
     --bg-light: #F4F7F9;
     --white: #FFFFFF;
@@ -61,7 +62,15 @@ img {
     padding: 80px 0;
 }
 
-/* ボタン（共通） */
+.text-center {
+    text-align: center;
+}
+
+.margin-top-lg {
+    margin-top: 40px;
+}
+
+/* ボタン共通 */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -86,7 +95,7 @@ img {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: #123C5E;
+    background-color: var(--primary-hover);
     color: #FFFFFF !important;
 }
 
@@ -99,70 +108,46 @@ img {
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn-secondary:active {
-    background-color: #008072;
+    background-color: var(--secondary-hover);
     color: #FFFFFF !important;
 }
 
-/* ★お問い合わせボタン（ヘッダー・共通） */
+/* アウトラインボタン */
+.btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color) !important;
+    background-color: transparent;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+    background-color: var(--primary-color);
+    color: #FFFFFF !important;
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+/* お問い合わせボタン（ヘッダー共通） */
 .btn-contact {
     background-color: var(--secondary-color);
     color: #FFFFFF !important;
     border-color: var(--secondary-color);
     padding: 8px 18px;
     font-size: 0.9rem;
+    border-radius: 4px;
 }
 
-/* ホバー・クリック時・選択時（文字消え防止） */
 .btn-contact:hover,
 .btn-contact:focus,
 .btn-contact:active {
-    background-color: #008072;
-    border-color: #008072;
+    background-color: var(--secondary-hover);
+    border-color: var(--secondary-hover);
     color: #FFFFFF !important;
     outline: none;
-}
-
-/* ボタンデザイン */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 4px;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-.btn-primary:hover {
-    background-color: var(--primary-hover);
-}
-
-.btn-secondary {
-    background-color: var(--white);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-outline {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-.btn-outline:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-large {
-    padding: 16px 40px;
-    font-size: 1.1rem;
 }
 
 
@@ -206,22 +191,12 @@ img {
 .main-nav a {
     font-weight: 500;
     font-size: 0.95rem;
+    padding: 8px 12px;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
     color: var(--primary-color);
-}
-
-.main-nav .btn-contact {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 8px 18px;
-    border-radius: 4px;
-}
-
-.main-nav .btn-contact:hover {
-    background-color: var(--primary-hover);
 }
 
 .mobile-menu-toggle {
@@ -235,14 +210,6 @@ img {
 /* ==========================================================================
    4. ヒーロー領域 & スライダー & 波アニメーション
    ========================================================================== */
-/* 静的ヒーロー */
-.hero-section {
-    background: linear-gradient(135deg, rgba(0, 90, 156, 0.85), rgba(0, 168, 150, 0.85)), url('hero-bg.jpg') center/cover no-repeat;
-    color: var(--white);
-    padding: 120px 20px;
-    text-align: center;
-}
-
 /* スライダー構造 */
 .hero-slider-section {
     position: relative;
@@ -330,12 +297,12 @@ img {
 /* スライダーインジケーター（ドット） */
 .slider-dots {
     position: absolute;
-    bottom: 5px; 
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
-    z-index: 25; 
+    z-index: 25;
     background: rgba(0, 0, 0, 0.3);
     padding: 8px 16px;
     border-radius: 20px;
@@ -358,7 +325,7 @@ img {
     border-radius: 10px;
 }
 
-/* 波アニメーションデコレーション */
+/* 波アニメーション */
 .wave-container {
     position: relative;
     width: 100%;
@@ -419,7 +386,6 @@ img {
 /* ==========================================================================
    5. メインコンテンツ各セクション
    ========================================================================== */
-/* グリッドレイアウト（事業・強み・実績） */
 .services-grid,
 .features-grid,
 .achievement-preview-grid {
@@ -428,7 +394,61 @@ img {
     gap: 30px;
 }
 
-.service-card,
+/* 事業内容カード */
+.service-card {
+    background-color: var(--white);
+    padding: 0 0 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-img img {
+    transform: scale(1.05);
+}
+
+.service-card h3,
+.service-card p,
+.service-card .link-more {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.service-card h3 {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.link-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* 特徴・実績プレビューカード */
 .feature-card,
 .preview-item {
     background-color: var(--white);
@@ -438,7 +458,6 @@ img {
     border: 1px solid var(--border-color);
 }
 
-.service-card h3,
 .feature-card h4,
 .preview-item h4 {
     font-size: 1.25rem;
@@ -452,150 +471,6 @@ img {
     color: var(--secondary-color);
     display: block;
     margin-bottom: 10px;
-}
-
-.link-more {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--secondary-color);
-    font-weight: 700;
-}
-
-/* カードレイアウト（詳細用） */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.card-item {
-    background-color: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    border-top: 4px solid var(--secondary-color);
-    border-radius: 6px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.card-item h4 {
-    font-size: 1.1rem;
-    color: #1A252C;
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.card-item p {
-    font-size: 0.9rem;
-    color: #666666;
-    line-height: 1.6;
-}
-/* 事業内容カードの基本スタイル */
-.service-card {
-    background-color: var(--white);
-    padding: 0 0 30px 0; /* 下側のみ余白を設定（画像はカード上端にぴったり合わせる） */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border-color);
-    overflow: hidden; /* 画像の飛び出しを防止 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* カード内画像エリア */
-.service-img {
-    width: 100%;
-    height: 180px; /* 画像の高さを統一 */
-    overflow: hidden;
-}
-
-.service-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 画像の縦横比を崩さずにトリミングして枠いっぱいに表示 */
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-img img {
-    transform: scale(1.05); /* ホバー時に画像を軽くズームイン */
-}
-
-/* カード内のテキスト余白調整 */
-.service-card h3,
-.service-card p,
-.service-card .link-more {
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.service-card h3 {
-    margin-top: 20px;
-}
-/* 業務実績グループ & カード */
-.achievement-group {
-    margin-bottom: 50px;
-}
-
-.group-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-}
-
-.group-header h3 {
-    font-size: 1.5rem;
-    color: #1A252C;
-}
-
-.achievement-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.achievement-item {
-    background: var(--white);
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.achievement-item h4 {
-    font-size: 1.15rem;
-    color: #003B46;
-    margin-bottom: 10px;
-}
-
-.achievement-item .desc {
-    font-size: 0.9rem;
-    color: #555555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.location-tag {
-    font-size: 0.8rem;
-    color: var(--secondary-color);
-    background-color: #F0F9F8;
-    padding: 6px 12px;
-    border-radius: 4px;
-    display: inline-block;
-    font-weight: 500;
 }
 
 /* お知らせリスト */
@@ -625,83 +500,6 @@ img {
     border-radius: 3px;
 }
 
-/* CTAセクション */
-.cta-section {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 60px 20px;
-}
-
-.cta-section h2, 
-.cta-section h3 {
-    margin-bottom: 15px;
-}
-
-/* ページヘッダー（下層ページ用） */
-.page-header {
-    background-color: var(--bg-light);
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.page-header h2 {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-}
-
-/* 会社概要テーブル */
-.overview-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 30px;
-}
-
-.overview-table th,
-.overview-table td {
-    padding: 15px;
-    border-bottom: 1px solid var(--border-color);
-    text-align: left;
-}
-
-.overview-table th {
-    width: 25%;
-    background-color: #EBF3F8;
-    color: var(--primary-color);
-}
-
-/* お問い合わせフォーム */
-.contact-form {
-    max-width: 700px;
-    margin: 40px auto 0;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.required {
-    color: #E74C3C;
-    font-size: 0.8rem;
-    margin-left: 5px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
 
 /* ==========================================================================
    6. フッター
@@ -738,106 +536,7 @@ img {
     flex-wrap: wrap;
 }
 
-.office-info h4 {
-    font-size: 0.95rem;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
-}
-
-.office-info p {
-    font-size: 0.85rem;
-    color: #BBBBBB;
-    line-height: 1.5;
-}
-
-.footer-tel-link {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-.footer-tel-link:hover {
-    color: var(--secondary-color);
-}
-
-.footer-map-wrapper {
-    width: 100%;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.footer-nav-block h4 {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    border-bottom: 1px solid #334451;
-    padding-bottom: 8px;
-}
-
-.footer-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.footer-nav a {
-    color: #BBBBBB;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-.footer-nav a:hover {
-    color: #FFFFFF;
-}
-
-.footer-bottom {
-    border-top: 1px solid #2C3E50;
-    padding-top: 20px;
-}
-
-.copyright {
-    font-size: 0.8rem;
-    color: #777777;
-}
-/* ==========================================================================
-   6. フッター
-   ========================================================================== */
-.site-footer {
-    background-color: #1A252C;
-    color: #FFFFFF;
-    padding: 60px 0 20px;
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-    margin-bottom: 40px;
-}
-
-.footer-logo {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
-}
-
-.company-name {
-    font-size: 0.95rem;
-    color: #CCCCCC;
-    margin-bottom: 25px;
-}
-
-.footer-contact-details {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-
-/* ★拠点（【大阪本社】【福岡営業所】）ボタンのスタイル */
+/* 拠点テキスト（【大阪本社】【福岡営業所】）ボタン */
 .office-select-btn {
     background: transparent;
     border: none;
@@ -857,9 +556,8 @@ img {
     text-decoration: underline;
 }
 
-/* ★現在マップ表示中のテキスト（アクティブ状態） */
 .office-select-btn.active {
-    color: var(--secondary-color, #00A896);
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
@@ -880,45 +578,6 @@ img {
     color: var(--secondary-color);
 }
 
-/* Google Map 埋め込み枠 */
-.footer-map-wrapper {
-    width: 100%;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-/* マップ切り替えタブボタン */
-.map-tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.map-tab {
-    background-color: #2C3E50;
-    color: #CCCCCC;
-    border: 1px solid #334451;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.map-tab:hover {
-    background-color: #334451;
-    color: #FFFFFF;
-}
-
-/* 選択されているタブ */
-.map-tab.active {
-    background-color: var(--secondary-color);
-    color: #FFFFFF;
-    border-color: var(--secondary-color);
-    font-weight: 700;
-}
-
-/* Google Map iframeを囲む枠 */
 .footer-map-wrapper {
     width: 100%;
     border-radius: 6px;
@@ -963,9 +622,8 @@ img {
 
 
 /* ==========================================================================
-   7. レスポンシブ対応（ブレイクポイント別統合）
+   7. レスポンシブ対応
    ========================================================================== */
-/* タブレットサイズ（960px以下） */
 @media (max-width: 960px) {
     .services-grid,
     .features-grid,
@@ -974,9 +632,7 @@ img {
     }
 }
 
-/* スマホサイズ（768px以下） */
 @media (max-width: 768px) {
-    /* ヘッダー・スマホメニュー */
     .mobile-menu-toggle {
         display: flex;
         flex-direction: column;
@@ -993,12 +649,11 @@ img {
     .mobile-menu-toggle span {
         width: 100%;
         height: 3px;
-        background-color: #333333; /* ヘッダーの背景色に合わせて調整 */
+        background-color: #333333;
         border-radius: 2px;
         transition: all 0.3s ease;
     }
 
-    /* 三本線 -> ×印アニメーション */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(9.5px) rotate(45deg);
     }
@@ -1009,7 +664,6 @@ img {
         transform: translateY(-9.5px) rotate(-45deg);
     }
 
-    /* メニュー表示位置とアニメーション */
     .main-nav {
         position: fixed;
         top: 0;
@@ -1029,7 +683,6 @@ img {
     }
 
     .main-nav ul {
-        display: flex;
         flex-direction: column;
         gap: 20px;
     }
@@ -1042,7 +695,6 @@ img {
         border-bottom: 1px solid #F0F0F0;
     }
 
-    /* ヒーロー・スライダー */
     .hero-slider-section {
         height: 400px;
     }
@@ -1055,31 +707,12 @@ img {
         flex-direction: column;
     }
 
-    .slider-arrow {
-        padding: 8px 12px;
-        font-size: 1.2rem;
-    }
-
-    /* グリッド・コンテンツレイアウト */
     .services-grid,
     .features-grid,
     .achievement-preview-grid {
         grid-template-columns: 1fr;
     }
 
-    .news-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-
-    .overview-table th,
-    .overview-table td {
-        display: block;
-        width: 100%;
-    }
-
-    /* フッター */
     .footer-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1088,10 +721,5 @@ img {
     .footer-contact-details {
         flex-direction: column;
         gap: 15px;
-    }
-
-    /* スマホ時は電話番号をさらにタップしやすく拡大 */
-    .footer-tel-link {
-        font-size: 1.2rem;
     }
 }
