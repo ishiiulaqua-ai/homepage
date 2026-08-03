@@ -899,6 +899,38 @@ img {
     color: #777777;
 }
 
+/* ==========================================
+   フッター マップ切替ボタン（最新HTML完全対応版）
+   ========================================== */
+.office-info .office-select-btn {
+    background-color: transparent !important;
+    color: #A0AEC0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 6px 16px !important;
+    border-radius: 6px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    outline: none !important;
+    margin-bottom: 8px !important;
+}
+
+/* マウスを乗せた時 */
+.office-info .office-select-btn:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* 選択中のボタン（アクティブ） */
+.office-info .office-select-btn.active {
+    background-color: var(--secondary-color, #00A896) !important;
+    color: #FFFFFF !important;
+    border-color: var(--secondary-color, #00A896) !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.4) !important;
+}
 
 /* ==========================================================================
    7. レスポンシブ対応（ブレイクポイント別統合）
