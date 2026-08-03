@@ -234,6 +234,33 @@ img {
     cursor: pointer;
 }
 
+/* お問い合わせフォーム内のボタン強調 */
+.contact-form .btn,
+.contact-form button[type="submit"],
+.contact-form input[type="submit"] {
+    /* くっきりした枠線を追加 */
+    border: 2px solid #003D6B; /* 少し濃い目の青枠 */
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    padding: 14px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* 存在感を出すために軽い影も追加（お好みで） */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ホバー（マウスを乗せた時）の見た目 */
+.contact-form .btn:hover,
+.contact-form button[type="submit"]:hover,
+.contact-form input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    border-color: #002244; /* ホバー時は枠線も少し濃く */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); /* 少し浮き上がる演出 */
+}
 
 /* ==========================================================================
    4. ヒーロー領域 & スライダー & 波アニメーション
