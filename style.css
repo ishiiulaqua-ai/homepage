@@ -234,33 +234,6 @@ img {
     cursor: pointer;
 }
 
-/* お問い合わせフォーム内のボタン強調 */
-.contact-form .btn,
-.contact-form button[type="submit"],
-.contact-form input[type="submit"] {
-    /* くっきりした枠線を追加 */
-    border: 2px solid #003D6B; /* 少し濃い目の青枠 */
-    background-color: var(--primary-color);
-    color: var(--white);
-    font-weight: bold;
-    padding: 14px 40px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-    /* 存在感を出すために軽い影も追加（お好みで） */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* ホバー（マウスを乗せた時）の見た目 */
-.contact-form .btn:hover,
-.contact-form button[type="submit"]:hover,
-.contact-form input[type="submit"]:hover {
-    background-color: var(--primary-hover);
-    border-color: #002244; /* ホバー時は枠線も少し濃く */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px); /* 少し浮き上がる演出 */
-}
 
 /* ==========================================================================
    4. ヒーロー領域 & スライダー & 波アニメーション
@@ -668,6 +641,27 @@ img {
     margin-bottom: 15px;
 }
 
+/* お問い合わせセクション（CTA）のボタンデザイン強化 */
+.cta-section .btn {
+    display: inline-block;
+    background-color: #FFFFFF !important;
+    color: var(--primary-color) !important;
+    border: 3px solid #FFFFFF !important;
+    font-weight: 700 !important;
+    padding: 16px 40px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn:hover {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
 /* ページヘッダー（下層ページ用） */
 .page-header {
     background-color: var(--bg-light);
@@ -733,30 +727,32 @@ img {
     font-size: 1rem;
 }
 
-/* お問い合わせセクション（CTA）のボタンデザイン強化 */
-.cta-section .btn {
-    display: inline-block;
-    background-color: #FFFFFF !important;     /* ボタン背景を白 */
-    color: var(--primary-color) !important;  /* 文字色をメインの青 */
-    border: 3px solid #FFFFFF !important;    /* くっきり見せるための白枠線 */
-    font-weight: 700 !important;
-    padding: 16px 40px;
+.contact-form .btn,
+.contact-form button[type="submit"],
+.contact-form input[type="submit"] {
+    border: 2px solid #003D6B;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+    padding: 14px 40px;
     border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 浮き出て見える影 */
+    cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* マウスを乗せた時（ホバー時） */
-.cta-section .btn:hover {
-    background-color: transparent !important; /* 背景を透明にして枠線だけに */
-    color: #FFFFFF !important;               /* 文字を白に */
-    border-color: #FFFFFF !important;         /* 枠線はそのまま白 */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);              /* 少し上に持ち上がる効果 */
+.contact-form .btn:hover,
+.contact-form button[type="submit"]:hover,
+.contact-form input[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    border-color: #002244;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
+
 
 /* ==========================================================================
-   6. フッター
+   6. フッター & マップ切替タブ
    ========================================================================== */
 .site-footer {
     background-color: #1A252C;
@@ -818,34 +814,47 @@ img {
     margin-top: 15px;
 }
 
-/* マップ切り替えタブボタン */
-.map-tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+/* マップ切替タブ（洗練デザインに統一統合） */
+.map-tabs,
+.access-tabs,
+.access-tab-container {
+    display: flex !important;
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    padding: 6px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    width: fit-content !important;
 }
 
-.map-tab {
-    background-color: #2C3E50;
-    color: #CCCCCC;
-    border: 1px solid #334451;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.map-tab,
+.access-tab {
+    background: transparent !important;
+    color: #A0AEC0 !important;
+    border: none !important;
+    padding: 8px 18px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.map-tab:hover {
-    background-color: #334451;
-    color: #FFFFFF;
+.map-tab:hover,
+.access-tab:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-.map-tab.active {
-    background-color: var(--secondary-color);
-    color: #FFFFFF;
-    border-color: var(--secondary-color);
-    font-weight: 700;
+.map-tab.active,
+.access-tab.active {
+    background-color: var(--secondary-color, #00A896) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 10px rgba(0, 168, 150, 0.4) !important;
 }
 
 .footer-map-wrapper {
@@ -927,7 +936,6 @@ img {
         transition: all 0.3s ease;
     }
 
-    /* 三本線 -> ×印アニメーション */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(9.5px) rotate(45deg);
     }
@@ -938,7 +946,6 @@ img {
         transform: translateY(-9.5px) rotate(-45deg);
     }
 
-    /* メニュー表示位置とアニメーション */
     .main-nav {
         position: fixed;
         top: 0;
@@ -1024,119 +1031,4 @@ img {
     .footer-tel-link {
         font-size: 1.2rem;
     }
-}
-
-.map-tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.05); /* うっすら背景になじませる */
-    padding: 5px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: fit-content;
-}
-
-.map-tab {
-    background: transparent;
-    color: #A0AEC0;
-    border: none;
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.25 ease;
-    letter-spacing: 0.5px;
-}
-
-/* ==========================================
-   フッター マップ切替タブ（修正版デザイン）
-   ========================================== */
-.access-tab-container,
-.access-tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    padding: 6px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    width: fit-content;
-}
-
-/* 通常のボタン状態 */
-.access-tab {
-    background: transparent !important;
-    color: #A0AEC0 !important;
-    border: none !important;
-    padding: 8px 18px !important;
-    border-radius: 6px !important;
-    font-size: 0.85rem !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    transition: all 0.25s ease !important;
-    outline: none !important;
-}
-
-/* マウスホバー時 */
-.access-tab:hover {
-    color: #FFFFFF !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-/* 選択されているタブ（アクティブ） */
-.access-tab.active {
-    background-color: var(--secondary-color, #00A896) !important; /* テーマカラー */
-    color: #FFFFFF !important;
-    font-weight: 700 !important;
-    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.4) !important;
-}
-
-
-/* ==========================================
-   フッター マップ切替タブ（最下部上書き定義）
-   ========================================== */
-footer .map-tabs,
-.footer-map-block .map-tabs {
-    display: flex !important;
-    gap: 8px !important;
-    margin-bottom: 16px !important;
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    padding: 6px !important;
-    border-radius: 8px !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    width: fit-content !important;
-}
-
-/* 未選択のタブ */
-footer .map-tab,
-.footer-map-block .map-tab {
-    background: transparent !important;
-    color: #A0AEC0 !important;
-    border: none !important;
-    padding: 8px 18px !important;
-    border-radius: 6px !important;
-    font-size: 0.85rem !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    transition: all 0.25s ease !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* ホバー時 */
-footer .map-tab:hover,
-.footer-map-block .map-tab:hover {
-    color: #FFFFFF !important;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-/* 選択されているタブ（アクティブ） */
-footer .map-tab.active,
-.footer-map-block .map-tab.active {
-    background-color: var(--secondary-color, #00A896) !important;
-    color: #FFFFFF !important;
-    font-weight: 700 !important;
-    box-shadow: 0 2px 10px rgba(0, 168, 150, 0.4) !important;
 }
