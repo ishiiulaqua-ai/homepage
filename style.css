@@ -1050,16 +1050,45 @@ img {
     letter-spacing: 0.5px;
 }
 
-/* ホバー時（未選択タブ） */
-.map-tab:hover {
-    color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0.08);
+/* ==========================================
+   フッター マップ切替タブ（修正版デザイン）
+   ========================================== */
+.access-tab-container,
+.access-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: fit-content;
 }
 
-/* アクティブ（選択中）のタブ */
-.map-tab.active {
-    background-color: var(--secondary-color); /* ブランド色（ターコイズ） */
-    color: #FFFFFF;
-    font-weight: 700;
-    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.35); /* ほのかな発光感 */
+/* 通常のボタン状態 */
+.access-tab {
+    background: transparent !important;
+    color: #A0AEC0 !important;
+    border: none !important;
+    padding: 8px 18px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    outline: none !important;
+}
+
+/* マウスホバー時 */
+.access-tab:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 選択されているタブ（アクティブ） */
+.access-tab.active {
+    background-color: var(--secondary-color, #00A896) !important; /* テーマカラー */
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.4) !important;
 }
