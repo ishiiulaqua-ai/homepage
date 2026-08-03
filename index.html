@@ -280,40 +280,46 @@
         <div class="container footer-container">
             <!-- 会社情報 & Google MAPエリア -->
             <div class="footer-info-block">
-                <h3 class="footer-logo">UL AQUATICS INC.</h3>
-                <p class="company-name">ユーエルアクアティクス株式会社</p>
-                
-                <div class="footer-contact-details">
-                    <div class="office-info">
-                        <h4>【大阪本社】</h4>
-                        <p>〒564-0051 大阪府吹田市豊津町19-12</p>
-                        <p class="tel-row">
-                            TEL: <a href="tel:0663100686" class="footer-tel-link">06-6310-0686</a>
-                        </p>
-                    </div>
-
-                    <div class="office-info">
-                        <h4>【福岡営業所】</h4>
-                        <p>〒814-0164 福岡県福岡市早良区賀茂4-6-27</p>
-                        <p class="tel-row">
-                            TEL: <a href="tel:0928740171" class="footer-tel-link">092-874-0171</a>
-                        </p>
-                    </div>
+              <h3 class="footer-logo">UL AQUATICS INC.</h3>
+              <p class="company-name">ユーエルアクアティクス株式会社</p>
+  
+              <div class="footer-contact-details">
+                <div class="office-info">
+                  <h4>【大阪本社】</h4>
+                  <p>〒564-0051 大阪府吹田市豊津町19-12</p>
+                  <p class="tel-row">
+                    TEL: <a href="tel:0663100686" class="footer-tel-link">06-6310-0686</a>
+                  </p>
                 </div>
-
-                <!-- Google MAP 埋め込み (大阪本社) -->
-                <div class="footer-map-wrapper">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.8684463581294!2d135.48887727628738!3d34.7589065800864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e4fcbbeaf499%3A0xe5fa43c83964a721!2z44CSNTY0LTAwNTEg5aSn6Ziq5bqc5ZC555Sw5biC6LGK5rSl55S677yR77yZ4oiS77yR77yS!5e0!3m2!1sja!2sjp!4v1785462664288!5m2!1sja!2sjp" 
-                        width="100%" 
-                        height="180" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Google Map 大阪本社">
-                    </iframe>
+                <div class="office-info">
+                  <h4>【福岡営業所】</h4>
+                  <p>〒814-0164 福岡県福岡市早良区賀茂4-6-27</p>
+                  <p class="tel-row">
+                    TEL: <a href="tel:0928740171" class="footer-tel-link">092-874-0171</a>
+                  </p>
                 </div>
+              </div>
+
+              <!-- タブ切替ボタン -->
+              <div class="map-tab-buttons">
+                <button type="button" class="map-tab-btn active" data-office="osaka">大阪本社</button>
+                <button type="button" class="map-tab-btn" data-office="fukuoka">福岡営業所</button>
+              </div>
+
+              <!-- Google MAP 埋め込みエリア -->
+              <div class="footer-map-wrapper">
+                <iframe
+                  id="footer-map-iframe"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.8684463581294!2d135.48887727628738!3d34.7589065800864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e4fcbbeaf499%3A0xe5fa43c83964a721!2z44CSNTY0LTAwNTEg5aSn6Ziq5bqc5ZC555Sw5biC6LGK5rSl55S6MTktMTI!5e0!3m2!1sja!2sjp!4v1710000000000"
+                  width="100%"
+                  height="180"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Google Map"
+                ></iframe>
+              </div>
             </div>
 
             <!-- ナビゲーションリンク -->
